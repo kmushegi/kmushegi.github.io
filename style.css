@@ -1,0 +1,182 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+img {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  /* Background color changed */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #006400;
+  /* Header background color changed to dark green */
+  color: #fff;
+  text-align: left;
+  /* Header text aligned to the left */
+  padding: 10px 20px;
+  /* Increased padding for header */
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* Stack sections vertically by default */
+  padding: 20px;
+  flex-grow: 1;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  /* Increase font size for "Hi!" title */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center content vertically */
+  text-align: left;
+  /* Align text to the left */
+}
+
+.profile-picture img {
+  width: 150px;
+  /* Adjust the size of the profile picture */
+  height: 150px;
+  border-radius: 50%;
+  /* Create a round shape */
+  margin-right: 20px;
+  /* Add spacing between the picture and text */
+}
+
+.bio-text p {
+  font-size: 16px;
+  color: #333;
+}
+
+.project {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  color: #777;
+}
+
+a {
+  color: #006400;
+  /* Link color changed to dark green */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  margin-top: auto;
+  /* Push the footer to the bottom of the container */
+}
+
+@media (min-width: 768px) {
+
+  /* For screens with a minimum width of 768px, display sections side by side */
+  .container {
+    flex-direction: row;
+  }
+
+  section {
+    flex-basis: 45%;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center content vertically */
+  text-align: left;
+  /* Align text to the left */
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.bio-text h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bio-text p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  /* Add spacing between paragraphs */
+}
+
+.social-links {
+  margin-top: 20px;
+  /* Add spacing between text and social links */
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  /* Add spacing between social icons */
+}
+
+/* Style for social media icons */
+.social-links img {
+  width: 32px;
+  /* Adjust the width of the icons */
+  height: 32px;
+  /* Adjust the height of the icons */
+}
