@@ -88,6 +88,10 @@ h2 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+  min-height: 100px; /* Set a fixed height for project sections */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align title at the top, description in the middle, and website link at the bottom */
 }
 
 .project h3 {
@@ -99,12 +103,14 @@ h2 {
 .project p {
   font-size: 16px;
   color: #777;
+  flex-grow: 1;
 }
 
 a {
   color: #006400;
   /* Link color changed to dark green */
   text-decoration: none;
+  margin-top: 10px;
 }
 
 a:hover {
@@ -121,7 +127,7 @@ footer {
   /* Push the footer to the bottom of the container */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
 
   /* For screens with a minimum width of 768px, display sections side by side */
   .container {
