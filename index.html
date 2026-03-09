@@ -1,13 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kote Mushegiani</title>
+    <meta
+      name="description"
+      content="Kote Mushegiani is based in San Francisco, originally from Georgia, and works on agent infrastructure at OpenAI."
+    />
+    <meta property="og:title" content="Kote Mushegiani" />
+    <meta
+      property="og:description"
+      content="Personal site for Kote Mushegiani."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://kote.fyi/static/generated/kote-line-2.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f5efe4" />
+    <script>
+      (() => {
+        const storageKey = "theme-preference";
+        const storedTheme = localStorage.getItem(storageKey);
+        const theme =
+          storedTheme === "light" || storedTheme === "dark"
+            ? storedTheme
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>kmushegi</title>
-</head>
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
 
+        const themeColor = theme === "dark" ? "#111512" : "#f5efe4";
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute("content", themeColor);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
 
-<body>
-  under construction...
-</body>
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Kote Mushegiani home">
+          <span class="brand-copy">kote</span>
+          <span class="brand-subcopy">for your information</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#links">Links</a>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            <span class="theme-toggle-dot" aria-hidden="true"></span>
+            <span data-theme-label>Dark</span>
+          </button>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="hero-copy">
+            <h1>Kote Mushegiani</h1>
+            <div class="hero-intro">
+              <p>
+                I am from Georgia 🇬🇪 and live in San Francisco. I am
+                interested in infrastructure, AI systems, robotics, and useful
+                software. I also like tinkering with electronics, cars,
+                tennis, and padel.
+              </p>
+              <p>
+                Right now I work on agent infrastructure at OpenAI. Before
+                that I built Komodo. A lot of this started with RoboCup at
+                Bowdoin.
+              </p>
+            </div>
+
+            <div class="social-inline" id="links" aria-label="Social links">
+              <a href="https://github.com/kmushegi" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/kmushegi/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://x.com/kmushegi" target="_blank" rel="noreferrer">X</a>
+            </div>
+          </div>
+
+          <aside class="portrait-card">
+            <div class="portrait-frame">
+              <img
+                src="./static/generated/kote-line-2.png"
+                alt="Illustrated portrait of Kote Mushegiani"
+              />
+            </div>
+            <p class="portrait-caption">
+              Usually in San Francisco. Often in Georgia.
+            </p>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          <span id="year"></span> Kote Mushegiani
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
