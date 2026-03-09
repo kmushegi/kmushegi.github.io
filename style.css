@@ -616,11 +616,11 @@ h2 {
   .hero-intro {
     position: relative;
     z-index: 2;
-    margin-top: 0.9rem;
+    margin-top: clamp(3rem, 16vw, 4.5rem);
   }
 
   .hero-intro p:first-child {
-    padding-right: min(31vw, 7.75rem);
+    padding-right: 0;
   }
 
   .social-inline {
@@ -631,7 +631,7 @@ h2 {
 
   .portrait-card {
     position: absolute;
-    top: 2.9rem;
+    top: 1.9rem;
     right: 0.1rem;
     width: min(36vw, 9.25rem);
     max-width: none;
